@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vitoriasantosnutri.vercel.app/sitemap.xml
