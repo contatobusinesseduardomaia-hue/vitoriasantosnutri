@@ -8,7 +8,18 @@
 <meta name="keywords" content="nutricionista Boa Vista, nutricionista em Boa Vista RR, Vitória Santos nutricionista, emagrecimento Boa Vista, nutricionista online, reeducação alimentar Boa Vista" />
 <meta name="author" content="Vitória Santos" />
 <meta name="theme-color" content="#211a14" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="canonical" href="https://vitoriasantosnutri.vercel.app/" />
+
+<!-- ================================================================================
+     DOMÍNIO DE PRODUÇÃO (fonte única): https://vitoriasantosnutri.vercel.app
+     Ao migrar para o domínio próprio (ex.: https://vitoriasantosnutri.com.br),
+     troque essa string por busca/substituição em TODAS as ocorrências abaixo:
+       • <link rel="canonical">  • og:url / og:image  • twitter:image
+       • todo o JSON-LD (@id, url, image)  • sitemap.xml  • robots.txt (Sitemap:)
+     Depois: reenviar o sitemap no Google Search Console e atualizar o site
+     oficial no Google Business Profile. Nenhuma outra URL de domínio é hardcoded.
+     ================================================================================ -->
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Vitória Santos | Nutricionista em Boa Vista – RR" />
@@ -17,12 +28,14 @@
 <meta property="og:image" content="https://vitoriasantosnutri.vercel.app/assets/img/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Vitória Santos, nutricionista em Boa Vista – RR" />
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:site_name" content="Vitória Santos · Nutricionista" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Vitória Santos | Nutricionista em Boa Vista – RR" />
 <meta name="twitter:description" content="Emagrecimento sem passar fome, atendimento presencial e on-line em Boa Vista – RR." />
 <meta name="twitter:image" content="https://vitoriasantosnutri.vercel.app/assets/img/og.jpg" />
+<meta name="twitter:image:alt" content="Vitória Santos, nutricionista em Boa Vista – RR" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,6 +45,19 @@
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23211a14'/%3E%3Cpath d='M20 20c10 2 16 9 16 22 0-13 6-20 16-22' fill='none' stroke='%23bd8235' stroke-width='3.4' stroke-linecap='round'/%3E%3Cpath d='M32 42c0-10 4-16 12-19' fill='none' stroke='%23bd8235' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E" />
 
+<!-- ANALYTICS (preparado, DESATIVADO) — ativar só se a cliente contratar.
+     Os CTAs já têm data-cta (header/hero/conversao/local-wa/final/float) e o
+     script.js dispara window.dataLayer.push({event:'cta_click', ...}) a cada clique,
+     pronto para GA4/GTM. Para ativar, descomente UM dos blocos abaixo e adicione
+     https://www.googletagmanager.com em script-src/connect-src no vercel.json (CSP).
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+-->
+
+
+<!-- CRN: quando a cliente confirmar o número do Conselho Regional de Nutricionistas,
+     adicionar em Person: "identifier": { "@type": "PropertyValue", "propertyName": "CRN", "value": "CRN-X XXXX" }
+     e exibir "Nutricionista · CRN-X XXXX" no rodapé (marcador já preparado lá). NÃO usar número fictício. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,25 +71,42 @@
       "publisher": { "@id": "https://vitoriasantosnutri.vercel.app/#vitoria" }
     },
     {
+      "@type": "WebPage",
+      "@id": "https://vitoriasantosnutri.vercel.app/#webpage",
+      "url": "https://vitoriasantosnutri.vercel.app/",
+      "name": "Vitória Santos | Nutricionista em Boa Vista – RR",
+      "description": "Nutricionista em Boa Vista – RR. Emagrecimento sem passar fome, reeducação alimentar e transtornos alimentares, com atendimento presencial e on-line.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://vitoriasantosnutri.vercel.app/#website" },
+      "about": { "@id": "https://vitoriasantosnutri.vercel.app/#vitoria" },
+      "primaryImageOfPage": "https://vitoriasantosnutri.vercel.app/assets/img/og.jpg"
+    },
+    {
       "@type": "Person",
       "@id": "https://vitoriasantosnutri.vercel.app/#vitoria",
       "name": "Vitória Santos",
       "jobTitle": "Nutricionista",
+      "description": "Nutricionista em Boa Vista – RR, com atendimento presencial e on-line focado em emagrecimento sem passar fome, reeducação alimentar e transtornos alimentares.",
       "image": "https://vitoriasantosnutri.vercel.app/assets/img/retrato.webp",
       "url": "https://vitoriasantosnutri.vercel.app/",
       "worksFor": { "@id": "https://vitoriasantosnutri.vercel.app/#consultorio" },
+      "knowsAbout": ["Emagrecimento", "Reeducação alimentar", "Transtornos alimentares", "Nutrição"],
       "sameAs": [ "https://www.instagram.com/vitoriasantosnutri/" ]
     },
     {
       "@type": ["ProfessionalService","LocalBusiness","Nutritionist"],
       "@id": "https://vitoriasantosnutri.vercel.app/#consultorio",
       "name": "Nutricionista Vitória Santos",
+      "description": "Consultório de nutrição em Boa Vista – RR, com atendimento presencial e on-line: emagrecimento sem passar fome, reeducação alimentar e acompanhamento para transtornos alimentares.",
       "image": "https://vitoriasantosnutri.vercel.app/assets/img/consultorio.webp",
       "url": "https://vitoriasantosnutri.vercel.app/",
       "telephone": "+55-95-98123-1116",
       "priceRange": "$$",
       "medicalSpecialty": "Nutrition",
-      "areaServed": { "@type": "City", "name": "Boa Vista" },
+      "areaServed": [
+        { "@type": "City", "name": "Boa Vista" },
+        { "@type": "AdministrativeArea", "name": "Roraima" }
+      ],
       "availableService": [
         { "@type": "MedicalTherapy", "name": "Emagrecimento e reeducação alimentar" },
         { "@type": "MedicalTherapy", "name": "Acompanhamento para transtornos alimentares" }
@@ -90,6 +133,8 @@
         { "@type": "Question", "name": "A Vitória Santos atende on-line?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O atendimento é presencial no consultório em Boa Vista – RR e também on-line, com o mesmo acompanhamento para quem está em outra cidade." } },
         { "@type": "Question", "name": "A nutricionista ajuda no emagrecimento?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O emagrecimento é trabalhado de forma saudável e sem passar fome, com um plano possível de manter — sem dietas radicais e sem prometer resultados milagrosos." } },
         { "@type": "Question", "name": "A Vitória atende transtornos alimentares e compulsão?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. O acompanhamento é cuidadoso e sem julgamentos, focado em reconstruir uma relação mais tranquila com a comida." } },
+        { "@type": "Question", "name": "Para quem o acompanhamento nutricional é indicado?", "acceptedAnswer": { "@type": "Answer", "text": "Para quem quer emagrecer com saúde e sem passar fome, para quem tem uma relação difícil com a comida ou compulsão e para quem já tentou várias dietas e não conseguiu manter. O atendimento é individual, presencial ou on-line." } },
+        { "@type": "Question", "name": "Quais áreas a nutricionista Vitória Santos atende?", "acceptedAnswer": { "@type": "Answer", "text": "Emagrecimento sem passar fome, reeducação alimentar e transtornos alimentares, sempre com plano individual e acompanhamento de perto." } },
         { "@type": "Question", "name": "Onde fica o consultório em Boa Vista?", "acceptedAnswer": { "@type": "Answer", "text": "Na R. Alferes Paulo Saldanha, 1069 - B, bairro São Francisco, Boa Vista – RR." } },
         { "@type": "Question", "name": "Como agendar uma consulta com Vitória Santos?", "acceptedAnswer": { "@type": "Answer", "text": "É só falar pelo WhatsApp (95) 98123-1116 e combinar o melhor horário para o seu atendimento." } }
       ]
@@ -311,6 +356,8 @@
         <details><summary>A Vitória Santos atende on-line?<span class="faq__x" aria-hidden="true"></span></summary><p>Sim. O atendimento é presencial no consultório em Boa Vista – RR e também on-line, com o mesmo acompanhamento para quem está em outra cidade.</p></details>
         <details><summary>A nutricionista ajuda no emagrecimento?<span class="faq__x" aria-hidden="true"></span></summary><p>Sim. O emagrecimento é trabalhado de forma saudável e sem passar fome, com um plano possível de manter — sem dietas radicais e sem prometer resultados milagrosos.</p></details>
         <details><summary>A Vitória atende transtornos alimentares e compulsão?<span class="faq__x" aria-hidden="true"></span></summary><p>Sim. O acompanhamento é cuidadoso e sem julgamentos, focado em reconstruir uma relação mais tranquila com a comida.</p></details>
+        <details><summary>Para quem o acompanhamento nutricional é indicado?<span class="faq__x" aria-hidden="true"></span></summary><p>Para quem quer emagrecer com saúde e sem passar fome, para quem tem uma relação difícil com a comida ou compulsão e para quem já tentou várias dietas e não conseguiu manter. O atendimento é individual, presencial ou on-line.</p></details>
+        <details><summary>Quais áreas a nutricionista Vitória Santos atende?<span class="faq__x" aria-hidden="true"></span></summary><p>Emagrecimento sem passar fome, reeducação alimentar e transtornos alimentares, sempre com plano individual e acompanhamento de perto.</p></details>
         <details><summary>Onde fica o consultório em Boa Vista?<span class="faq__x" aria-hidden="true"></span></summary><p>Na R. Alferes Paulo Saldanha, 1069 - B, bairro São Francisco, Boa Vista – RR.</p></details>
         <details><summary>Como agendar uma consulta com Vitória Santos?<span class="faq__x" aria-hidden="true"></span></summary><p>É só falar pelo WhatsApp (95) 98123-1116 e combinar o melhor horário para o seu atendimento.</p></details>
       </div>
@@ -363,6 +410,8 @@
   <div class="wrap rodape__in">
     <div class="rodape__marca">
       <span class="marca marca--claro"><span class="marca__ic" aria-hidden="true"><svg viewBox="0 0 40 40" width="28" height="28"><path d="M11 12c8 1.5 12 7 12 17 0-10 4-15.5 12-17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M22 30c0-8 3-12.5 9-15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><span class="marca__txt"><strong>Vitória Santos</strong><em>Nutricionista · Boa Vista – RR</em></span></span>
+      <!-- CRN (a confirmar com a cliente): ao receber o registro, trocar a linha acima por
+           <em>Nutricionista · CRN-X XXXX · Boa Vista – RR</em> e preencher em Person no JSON-LD. Não usar número fictício. -->
       <p>Emagrecimento sem passar fome, reeducação alimentar e transtornos alimentares — presencial e on-line.</p>
     </div>
     <div class="rodape__col">

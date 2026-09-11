@@ -40,6 +40,15 @@
     }, { passive: true });
   }
 
+  /* Analytics — preparado (sem rede). Empilha eventos em window.dataLayer para
+     GA4/GTM lerem quando/se forem ativados. Sem script externo, não coleta nada sozinho. */
+  window.dataLayer = window.dataLayer || [];
+  document.querySelectorAll("[data-cta]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      window.dataLayer.push({ event: "cta_click", cta_local: el.getAttribute("data-cta"), destino: "whatsapp" });
+    });
+  });
+
   /* Menu mobile */
   var menuBtn = document.getElementById("menuBtn");
   var menu = document.getElementById("menu");
